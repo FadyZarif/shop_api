@@ -6,13 +6,13 @@ import 'package:shop_app/shared/components/components.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class BoardingModel {
-  final String image = 'assets/onboarding.png';
+  late final String image ;
 
   late final String title;
 
   late final String body;
 
-  BoardingModel({required this.title, required this.body});
+  BoardingModel( {required this.image,required this.title, required this.body});
 }
 
 class OnBoardingScreen extends StatefulWidget {
@@ -24,9 +24,9 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   List<BoardingModel> boarding = [
-    BoardingModel(title: 'Title One', body: 'Body One'),
-    BoardingModel(title: 'Title Two', body: 'Body Two'),
-    BoardingModel(title: 'Title Three', body: 'Body Three'),
+    BoardingModel(image: 'assets/onboarding.png',title: 'Choose Product', body: 'You Can Easily Find The Product You Want From Our Various Products!'),
+    BoardingModel(image: 'assets/onBoarding2.png',title: 'Choose a Payment Method', body: 'We Have Many Payment Methods Supported', ),
+    BoardingModel(image: 'assets/onboarding3.png',title: 'Get Your Order', body: 'Open The Doors, Your Order is Now Ready For You!'),
   ];
 
   PageController pageViewController = PageController();
@@ -47,7 +47,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         actions: [
           TextButton(
               onPressed: submit,
-              child: Text('SKIP'))
+              child: Text('SKIP',style: TextStyle(color: Colors.deepOrange),))
         ],
       ),
       body: Padding(
@@ -78,7 +78,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ),
                 const Spacer(),
                 FloatingActionButton(
-                    child: const Icon(Icons.arrow_forward),
+                    child: const Icon(Icons.arrow_forward,color: Colors.white),
+                    backgroundColor: Colors.deepOrange,
                     onPressed: () {
                       if (pageViewController.page?.ceil() == boarding.length - 1) {
                         submit();
@@ -109,7 +110,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         ),
         Text(
           model.title,
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.deepOrange),
         ),
         const SizedBox(
           height: 20,
