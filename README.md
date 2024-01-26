@@ -42,15 +42,15 @@ Here is a demo of the project:
 ## For Developers
 
 ### Plugins
-smooth_page_indicator
-flutter_bloc
-bloc
-dio
-conditional_builder_null_safety
-flutter_toast
-shared_preferences
-carousel_slider
-image_picker
+* smooth_page_indicator
+* flutter_bloc
+* bloc
+* dio
+* conditional_builder_null_safety
+* flutter_toast
+* shared_preferences
+* carousel_slider
+* image_picker
 
 
 ### Technologies used in this preoject:
