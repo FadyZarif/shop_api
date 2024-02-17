@@ -1,4 +1,4 @@
-# To-Do List
+# Shop API
 
 shopping app that allows the user to navigate through products, add products to favorites and customize his own profile. uses API Integration, Link on Postman: https://www.getpostman.com/collections/3223d639447a8524e38f
 To download this app, follow this link: [Shop App](https://www.dropbox.com/scl/fi/d7iplsjr182l6b475rsn1/shop-app.apk?rlkey=jgmhetso3qnl8rakp3oonlnza&dl=0)
